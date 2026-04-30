@@ -15,6 +15,7 @@ async function AuthUser(code: string) {
     toast.add({
         title: "Iniciando sesión",
         description: "Espera un momento mientras se inicia tu sesión...",
+        color:"info"
     });
     try {
         const data = await $fetch(
@@ -33,6 +34,7 @@ async function AuthUser(code: string) {
             title: "Error",
             description:
                 "Ocurrió un error al iniciar sesión. Intenta de nuevo.",
+            color: "error"
         });
         isCode.value = false;
         return null;
@@ -56,6 +58,7 @@ if (route.query["code"]) {
                                 title: "Has iniciado sesion",
                                 description:
                                     "Has iniciado sesion exitosamente",
+                                color:"info"
                             });
                         })
                         .catch((error) => {
@@ -64,6 +67,7 @@ if (route.query["code"]) {
                                 title: "Error",
                                 description:
                                     "Ocurrió un error al iniciar sesión. Intenta de nuevo.",
+                                color: "error"
                             });
                             isCode.value = false;
                         });
@@ -85,6 +89,7 @@ const providers = ref<ButtonProps[]>([
             toast.add({
                 title: "Redireccionando",
                 description: "Espera un momento mientras se te redirecciona...",
+                color:"info"
             });
             setTimeout(() => {
                 navigateTo(config.public.BACKEND_URL + "/api/auth", {

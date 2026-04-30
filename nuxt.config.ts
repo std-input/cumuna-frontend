@@ -12,5 +12,9 @@ export default defineNuxtConfig({
     public: {
       BACKEND_URL: process.env.BACKEND_URL
     }
-  }
+  },
+  routeRules: {
+    // Set layout for specific route
+    '/admin/*': { appLayout: 'admin' },
+  },
 })

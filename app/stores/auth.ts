@@ -4,7 +4,7 @@ export type User = {
   id: string;
   email: string;
   given_name: string;
-  familyName: string;
+  family_name: string;
   picture: string;
   description: string;
   role: string;
@@ -27,6 +27,7 @@ type RefreshTokenResponse = {
 export const useAuthStore = defineStore("auth", {
   state: () => ({
     user: null as User | null,
+    ready: false
   }),
 
   actions: {
@@ -138,14 +139,15 @@ export const useAuthStore = defineStore("auth", {
     // -----------------------------
     // Load from localStorage on init
     // -----------------------------
-    init() {
+    async init() {
       if (process.client && !this.user) {
         const saved = localStorage.getItem("user");
         if (saved) {
           this.user = JSON.parse(saved);
-          this.refreshToken();
+          await this.refreshToken();
         }
       }
+      this.ready = true
     },
   },
 });

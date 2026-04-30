@@ -23,7 +23,8 @@ const itemsDropdown = ref<DropdownMenuItem[][]>([
   [
     {
       label: 'Perfil',
-      icon: 'i-lucide-circle-user-round'
+      icon: 'i-lucide-circle-user-round',
+      to: '/profiles/'+user.value?.id
     },
     {
       label: 'Planes',
@@ -33,6 +34,7 @@ const itemsDropdown = ref<DropdownMenuItem[][]>([
     {
       label: 'Servicios',
       icon: 'i-lucide-monitor-smartphone',
+      to: '/services/me'
     },
   ],
   [

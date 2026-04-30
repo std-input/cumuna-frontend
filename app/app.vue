@@ -1,6 +1,5 @@
 <script setup>
 const auth = useAuthStore();
-auth.init();
 </script>
 
 <template>
