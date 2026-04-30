@@ -3,5 +3,7 @@
 - Terminar listar, crear, eliminar categorias en admin (Hecho en el composable)
 - Hacer el modal para los pricings
 - Terminar listar, aceptar, eliminar planRequests en admin
-- Empezar a construir listar y gestion de servicios en profile
+- Empezar a construir listar y gestion de servicios en profile y agregar la creacion de codigo de rating
+- Crear la vista para ver un servicio unico y sus comentarios
+
 - Implementar la busqueda y filtrado en el index
