@@ -31,11 +31,6 @@ const itemsDropdown = ref<DropdownMenuItem[][]>([
       icon: 'i-lucide-credit-card',
       to: '/pricings'
     },
-    {
-      label: 'Servicios',
-      icon: 'i-lucide-monitor-smartphone',
-      to: '/services/me'
-    },
   ],
   [
     {

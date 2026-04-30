@@ -1,0 +1,7 @@
+- Hacer la edicion del perfil
+- Terminar listar, crear, eliminar locations en admin (Hecho en el composable)
+- Terminar listar, crear, eliminar categorias en admin (Hecho en el composable)
+- Hacer el modal para los pricings
+- Terminar listar, aceptar, eliminar planRequests en admin
+- Empezar a construir listar y gestion de servicios en profile
+- Implementar la busqueda y filtrado en el index
